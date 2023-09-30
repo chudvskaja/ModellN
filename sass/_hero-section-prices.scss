@@ -1,0 +1,62 @@
+.prices-text {
+    margin-bottom: 40px;
+}
+.project-hero {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .prices-img {
+    flex: 1; /* Занимает половину контейнера */
+    max-width: 50%; /* Максимальная ширина картинки */
+    height: 100vh;
+  }
+  
+  .design-project {
+    flex: 1; /* Занимает половину контейнера */
+    padding: 0 20px; /* Добавляет отступы справа и слева */
+    box-sizing: border-box; /* Учитываем padding в ширине элемента */
+  }
+  
+  .design-title {
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  
+  /* Дополнительные стили, если необходимо */
+  .design-project p {
+    margin-bottom:30px;
+  }
+
+  .small-text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .dot-list {
+    list-style-type: disc; /* Задаем стиль маркера (точки) */
+    padding-left: 20px; /* Добавляем небольшой отступ слева для точек */
+    /* Дополнительные стили, если необходимо */
+    li {
+      margin-bottom: 10px; /* Добавляем отступ между элементами списка */
+    }
+  }
+  
+  @media screen  and (max-width: 767px){
+
+    
+    .project-hero {
+        display: flex;
+        flex-direction: column; /* Столбцовая компоновка для мобильной версии */
+        align-items: center;
+    }
+    
+    .prices-img {
+        max-width: 100%; /* Убираем максимальную ширину */
+        height: auto; /* Добавляем автоматическую высоту для сохранения пропорций */
+        margin-bottom: 20px; /* Отступ между изображением и текстом */
+    }
+    
+  }
+  

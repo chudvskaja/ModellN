@@ -1,0 +1,58 @@
+.projects-stages {
+    padding: 30px;
+  }
+  .project-item {
+    padding: 15px 0px;
+    border-top: 1px solid gray;  
+  }
+
+  .project-icon {
+    display: flex;
+    justify-content: space-between; 
+    align-items: left;
+  }
+
+  .project-item:last-child{
+    border-bottom: 1px solid gray;
+    margin-bottom: 100px;
+  }
+
+  .project-item:hover {
+    font-weight: bold; 
+   
+  }
+
+  .project-item:hover>.dropdown-text{ 
+    display: block; 
+  }
+
+  .project-item:hover .fa-plus {
+    color: var(--black-color);
+  }
+
+  .fa-plus { 
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--black-color);
+  }
+
+  .project-text {
+    font-size: 20px;
+    display: block;
+    font-weight: 200;
+    color: var(--black-color);
+  }
+
+  .dropdown-text {
+  display: none;
+  margin-top: 34px;
+  background-color: var(--white-color);
+  font-weight: 400;
+  font-size: 14px;
+  } 
+
+  @media screen  and (min-width: 768px){
+    h2 {
+      text-align: left;
+    }
+  } 

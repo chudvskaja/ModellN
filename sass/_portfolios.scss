@@ -1,0 +1,134 @@
+body.enlarged {
+  overflow: hidden; /* Запрет прокрутки, если контент выходит за границы окна браузера */
+}
+
+body.enlarged::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Затемнение с помощью полупрозрачного черного цвета */
+  z-index: 9998; /* Убеждаемся, что фоновый слой находится под увеличенной картинкой */
+}
+
+.close-button:hover {
+  background-color: black;
+  color: white; 
+}
+
+.like-button {
+  color: rgb(210, 56, 56); /* Цвет текста кнопки */
+  border: none;
+  font-size: 14px; /* Размер шрифта */
+  cursor: pointer; /* Изменение курсора при наведении */
+  transition: color 0.3s; /* Плавное изменение цвета при наведении */
+  background-color: white;
+
+  /* Дополнительные стили при наведении */
+  &:hover {
+    color: #ddb5b5; /* Цвет текста при наведении */
+  }
+  
+  &:focus {
+    outline: none; /* Убираем контур фокуса при нажатии */
+  }
+  
+  &:disabled {
+    color: #ccc; /* Цвет текста для отключенной кнопки */
+    cursor: not-allowed; /* Курсор "недоступно" для отключенной кнопки */
+  }
+}
+
+.like-button i {
+  font-size: 16px; /* Размер иконки */
+  color: #0000EE;
+  margin-right: 8px; /* Отступ между иконкой и текстом, если есть */
+}
+
+
+.portfolio-teaser img {
+    width: 100%; /* Занимаем 100% ширины родительского контейнера */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    margin-bottom: 10px; /* Отступ между картинками */
+  }
+  
+  /* Устанавливаем две колонки в одном ряду до 768px */
+  @media screen and (max-width: 767px) { 
+    .portfolio-teaser {
+      width: 100%; /* Занимаем всю ширину экрана */
+    }  
+  
+    .portfolio-list { 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 -5px; /* Убираем отступы снаружи блоков */  
+    }
+  
+    .portfolio-item { 
+      width: calc(50% - 10px); /* Устанавливаем ширину 50% с учетом отступов */
+      margin: 0 5px; /* Добавляем отступы между элементами */
+    } 
+  }
+  
+  /* Дополнительные стили для больших экранов (768px и выше) */
+  @media screen and (min-width: 768px) {
+    .portfolio-teaser {
+      width: 95%; /* 4 колонки с промежутками в 10px (4 * 2 * 10px = 80px) */
+      height: auto; /* Для сохранения пропорций изображения */
+      box-sizing: border-box; /* Учитываем отступы и границы в расчетах ширины */
+    }
+  
+    .portfolio-list {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%; 
+    }
+  }
+  
+
+  /* Дополнительные стили для увеличенной картинки */
+.enlarged-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  z-index: 9999;
+}
+
+
+
+.close-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10000;
+} 
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.gallery-link {
+  animation: blink 6s infinite; 
+  display: block;
+  margin-top: 50px;
+  width: 150px;
+  color: white;
+  border: 1px solid black;
+  padding: 15px;
+  background-color: black;
+  text-align: center; 
+}
+ 
+
+

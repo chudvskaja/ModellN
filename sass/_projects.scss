@@ -1,0 +1,56 @@
+.like-button {
+  color: rgb(210, 56, 56); /* Цвет текста кнопки */
+  border: none;
+  font-size: 14px; /* Размер шрифта */
+  cursor: pointer; /* Изменение курсора при наведении */
+  transition: color 0.3s; /* Плавное изменение цвета при наведении */
+  background-color: white;
+
+  /* Дополнительные стили при наведении */
+  &:hover {
+    color: #ddb5b5; /* Цвет текста при наведении */
+  }
+  
+  &:focus {
+    outline: none; /* Убираем контур фокуса при нажатии */
+  }
+  
+  &:disabled {
+    color: #ccc; /* Цвет текста для отключенной кнопки */
+    cursor: not-allowed; /* Курсор "недоступно" для отключенной кнопки */
+  }
+}
+
+.like-button i {
+  font-size: 16px; /* Размер иконки */
+  color: #0000EE;
+  margin-right: 8px; /* Отступ между иконкой и текстом, если есть */
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .projects {
+    display: none;
+  } 
+}
+
+
+
+@media screen and (min-width: 768px){
+  .project-teaser {
+    width: 95%; /* 4 колонки с промежутками в 10px (4 * 2 * 10px = 80px) */
+    height: auto; /* Для сохранения пропорций изображения */
+    box-sizing: border-box; /* Учитываем отступы и границы в расчетах ширины */
+  }
+
+}
+
+  @media screen and (min-width:1024px) {
+    .projects-list {
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
+
+  

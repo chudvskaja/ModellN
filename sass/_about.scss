@@ -1,0 +1,94 @@
+
+.name, .title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.person {
+    margin-bottom: 100px;
+}
+
+.about-title {
+    font-size: 24px;
+    text-align: center;
+    margin: 100px 100px;
+    font-weight: 200;
+}
+
+.description-index {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media screen and (max-width:767px) {
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      .about-link {
+        animation: blink 6s infinite; 
+        display: block;
+        margin: 50px auto;
+        width: 150px;
+        color: white;
+        border: 1px solid black;
+        padding: 15px;
+        background-color: black;
+        text-align: center; 
+      }
+}
+
+@media screen and (min-width: 768px){
+    .about{
+        background-color: #F3F3F3;
+        padding: 70px 20px;
+        display: flex;
+    }
+
+    .about-title {
+        text-align: left;
+        font-size: 14px;
+        margin: 0 0 10px 0;   
+    }
+   
+    .title {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .desktop-about {
+        display: flex;
+        justify-content: flex-start;
+        gap: 50px;
+    }
+
+    .desktop-left {
+        flex: 1;
+    }
+
+    .desktop-write {
+        flex: 3.7;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      
+      .about-link {
+        animation: blink 6s infinite; 
+        display: block;
+        margin-left: 200px;
+        width: 150px;
+        color: white;
+        border: 1px solid black;
+        padding: 15px;
+        background-color: black;
+        text-align: center; 
+      }
+}
+
+
+  

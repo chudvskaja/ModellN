@@ -1,0 +1,96 @@
+.mobile-container {
+  margin: auto;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 10px;
+  position: relative;
+ 
+
+  // KUN MOBILE MENU START
+  @media screen and (max-width: 767px) {
+    .topnav {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+
+      & #myLinks {
+        height: 100vh;
+        display: none;
+        text-align: center;
+        padding: 33px;
+        background-color: var(--black-color);
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        top: 100%;
+      }
+
+      & a {
+        color: white;
+        padding: 14px 0px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+  // MOBILE MENU FINISH
+
+  .fa-bars {
+    font-size: 30px;
+    color: black; 
+  }
+
+  // TABLET OG DESKTOP START
+  @media screen and (min-width: 768px) {
+
+    .logo {
+      width: 200px;
+    }
+
+
+    .topnav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white-color);
+      padding-bottom: 0;
+      border-radius: 0;
+      z-index: 10000;
+
+      #myLinks {
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      & a {
+        color: black;
+        padding: 14px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+
+        transition: font-size 0.3s;
+
+        &:hover {
+          color: #0000EE;
+          font-size: 1.1em;
+        }
+      }
+
+      & a.icon {
+        display: none;
+      }
+    }
+    .fa-cart-shopping {
+      margin-right: 0;
+    }
+  }
+}

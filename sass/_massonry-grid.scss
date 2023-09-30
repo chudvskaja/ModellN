@@ -1,0 +1,65 @@
+.grid-section {
+    margin: 50px 0;
+  }
+  
+  .grid-wrapper {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+  
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+      }
+  
+      &.wide {
+        grid-column: span 2;
+  
+        &:hover img {
+          transform: scale(1.1);
+          z-index: 200;
+          border: 1px solid var(--dark-color);
+        }
+      }
+  
+      &.tall {
+        grid-row: span 2;
+  
+        &:hover img {
+          transform: scale(1.1);
+          z-index: 200;
+          border: 1px solid var(--dark-color);
+        }
+      }
+  
+      &.big {
+        grid-column: span 2;
+        grid-row: span 2;
+  
+        &:hover img {
+          transform: scale(1.1);
+          z-index: 200;
+          border: 1px solid var(--dark-color);
+        }
+      }
+  
+      &.normal:hover img {
+        transform: scale(1.1);
+        z-index: 200;
+        border: 1px solid var(--dark-color);
+      }
+    }
+  } 
+  

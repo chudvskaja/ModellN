@@ -1,0 +1,48 @@
+$h1-font-size: 34px;
+$h2-font-size: 34px;
+$pink-accent: var(--pink-accent);
+$white-color: var(--white-color);
+$black-color: var(--black-color);
+
+h1 {
+  font-family: 'Mukta', sans-serif;
+  text-align: left;
+  margin-bottom: 14px; 
+  font-weight: normal;
+  
+}
+
+h2 {
+  font-size: $h2-font-size;
+  text-align: center;
+  margin: 44px 0 46px;
+}
+
+// .title-pink, .member-title {
+//   color: $pink-accent;
+// }
+
+.questions-title, .products-title {
+  color: $white-color;
+}
+
+
+@media screen and (max-width:767px) {
+  .homepage-title, .about-page-title {
+    color: $black-color;
+    font-size: 54px;
+    letter-spacing: 3px;
+    line-height: 75px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  h1, h2 {
+    font-size: 38px;
+    letter-spacing: 1px;
+    line-height: 45px;
+    color: $black-color;
+   
+  }
+}
